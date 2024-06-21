@@ -57,10 +57,26 @@
 
 // // Output: ['HTML & CSS', 'JavaScript', 'ReactJS']
 
-function getContentLength(content) {
-  return content.length;
+// function getContentLength(content) {
+//   return content.length;
+// }
+
+// // Mở tab Console để xem kết quả trực quan
+// console.log(getContentLength("JavaScript"));
+// console.log(getContentLength("Hello World"));
+
+function isNumber(value) {
+  if (isNaN(value)) {
+    return false;
+  }
+
+  return typeof value === "number";
 }
 
-// Mở tab Console để xem kết quả trực quan
-console.log(getContentLength("JavaScript"));
-console.log(getContentLength("Hello World"));
+// Expected results:
+console.log(isNumber(999)); // true
+console.log(isNumber("abc")); // false
+console.log(isNumber("100")); // false
+
+console.log(isNumber(NaN)); // false
+console.log(isNumber(100 / "abc")); // false
