@@ -1,29 +1,3 @@
-function sum(a, b) {
-  console.log(a + b);
-}
-
-document.write("Tao Button va Text bang Script<BR>");
-document.write("<BR>");
-document.write("<input type=button name=welcome value = 'Welcome' ");
-document.write("onclick = 'alert ('Welcome to JavaScript');' > ");
-document.write("<input type = text name = msg value = 'Welcome to'>");
-
-const hide = (...el) => [...el].forEach((e) => (e.style.display = "none"));
-
-// Ví dụ
-// Ẩn tất cả các phần tử <img> trên trang
-hide(document.querySelectorAll("img"));
-
-const hasClass = (el, className) => el.classList.contains(className);
-
-// Ví dụ
-hasClass(document.querySelector("p.special"), "special"); // true
-
-const toggleClass = (el, className) => el.classList.toggle(className);
-
-// Ví dụ
-toggleClass(document.querySelector("p.special"), "special");
-// Thẻ p sẽ không còn class "special" nữa
 /**
  * - Variables
  *
@@ -37,4 +11,56 @@ toggleClass(document.querySelector("p.special"), "special");
  *
  * - Truthy and falsy
  * - Falsy values: 0, "", '', NaN, null, undefined
+ *
+ * - Advanced logical
+ *
+ * FUNCTION
+ * - Parameter function
+ * - Arguments
+ *
+ * - return
+ *
+ * -types func
+ *
+ *
+ * STRING
+ *- String methods: length, indexOf, lasIndexOf, search, slice, replace, toLowerCase, toUpperCase, trim, split
+ *
  */
+
+// function writeLog() {
+//   for (var param of arguments) {
+//     console.log(param);
+//   }
+// }
+
+// writeLog("html", "css", "js");
+
+// function showMess() {}
+
+// var showMess = function () {};
+
+// var showMess = () => {};
+
+// var fullName = new String("Khairxzd Kieu");
+
+// console.log(typeof fullName);
+
+// var coursesStr = "HTML & CSS, JavaScript, ReactJS";
+
+// function strToArray(str) {
+//   return str.split(",");
+// }
+
+// // Expected results
+// console.log(strToArray(coursesStr));
+
+// // Output: ['HTML & CSS', 'JavaScript', 'ReactJS']
+
+function getContentLength(content) {
+  return content.length;
+}
+
+// Mở tab Console để xem kết quả trực quan
+console.log(getContentLength("JavaScript"));
+console.log(getContentLength("Hello World"));
