@@ -1,6 +1,6 @@
-const myArr = ["html", "css"];
-
-console.log(myArr);
+function sum(a, b) {
+  console.log(a + b);
+}
 /**
  * - Variables
  *
